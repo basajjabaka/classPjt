@@ -41,6 +41,7 @@ export const DEPARTMENTS = [
     "Physical Education",
     "Law",
 ] as const;
+export const DEPARTMENTS = ['CS', 'Maths', 'Physics', 'Luganda']
 
 export const DEPARTMENT_OPTIONS = DEPARTMENTS.map((dept) => ({
     value: dept,
@@ -112,3 +113,4 @@ export const subjects = [
         code: "CHEM",
     },
 ];
+}))
