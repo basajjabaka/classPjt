@@ -41,7 +41,6 @@ export const DEPARTMENTS = [
     "Physical Education",
     "Law",
 ] as const;
-export const DEPARTMENTS = ['CS', 'Maths', 'Physics', 'Luganda']
 
 export const DEPARTMENT_OPTIONS = DEPARTMENTS.map((dept) => ({
     value: dept,
@@ -64,30 +63,38 @@ const getEnvVar = (key: string): string => {
     return value;
 };
 
-// export const CLOUDINARY_UPLOAD_URL = getEnvVar("VITE_CLOUDINARY_UPLOAD_URL");
-// export const CLOUDINARY_CLOUD_NAME = getEnvVar("VITE_CLOUDINARY_CLOUD_NAME");
+export const CLOUDINARY_UPLOAD_URL = getEnvVar("VITE_CLOUDINARY_UPLOAD_URL");
+export const CLOUDINARY_CLOUD_NAME = getEnvVar("VITE_CLOUDINARY_CLOUD_NAME");
 export const BACKEND_BASE_URL = getEnvVar("VITE_BACKEND_BASE_URL");
 
-export const BASE_URL =  import.meta.env.VITE_API_URL;
-export const ACCESS_TOKEN_KEY = import.meta.env.VITE_ACCESS_TOKEN_KEY
-export const REFRESH_TOKEN_KEY = import.meta.env.VITE_REFRESH_TOKEN_KEY
+export const BASE_URL = getEnvVar("VITE_API_URL");
+export const ACCESS_TOKEN_KEY = getEnvVar("VITE_ACCESS_TOKEN_KEY");
+export const REFRESH_TOKEN_KEY = getEnvVar("VITE_REFRESH_TOKEN_KEY");
 
 export const REFRESH_TOKEN_URL = `${BASE_URL}/refresh-token`;
 
-// export const CLOUDINARY_UPLOAD_PRESET = getEnvVar("VITE_CLOUDINARY_UPLOAD_PRESET");
+export const CLOUDINARY_UPLOAD_PRESET = getEnvVar("VITE_ClOUDINARY_UPLOAD_PRESET");
 
 export const teachers = [
     {
-        id: "1",
+        id: "T-001",
         name: "John Doe",
     },
     {
-        id: "2",
+        id: "T-002",
         name: "Jane Smith",
     },
     {
-        id: "3",
+        id: "T-003",
         name: "Dr. Alan Turing",
+    },
+    {
+        id: "T-004",
+        name: "Marie Curie",
+    },
+    {
+        id: "T-005",
+        name: "Albert Einstein",
     },
 ];
 
@@ -105,12 +112,21 @@ export const subjects = [
     {
         id: 3,
         name: "Physics",
-        code: "PHY",
+        code: "PHYS",
     },
     {
         id: 4,
         name: "Chemistry",
         code: "CHEM",
     },
+    {
+        id: 5,
+        name: "Biology",
+        code: "BIOL",
+    },
+    {
+        id: 6,
+        name: "English Literature",
+        code: "ENGL",
+    },
 ];
-}))
